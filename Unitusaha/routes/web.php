@@ -31,6 +31,14 @@ Route::get('/UnitUsaha', function () {
     return view('UnitUsaha');
 });
 
+Route::get('/koperasi', function () {
+    return view('koperasi');
+});
+
+Route::get('/tambah_koperasi', function () {
+    return view('tambah_koperasi');
+});
+
 
 Route::get('/UnitUsaha', 'App\Http\Controllers\usahaController@index');
 Route::get('/UnitUsaha/tambah','App\Http\Controllers\usahaController@tambah');
@@ -45,3 +53,10 @@ Route::post('/UnitUsaha/store',[App\Http\Controllers\UnitUsahaController::class,
 Route::get('/UnitUsaha/edit/{id_usaha}',[App\Http\Controllers\UnitUsahaController::class, 'edit']);
 Route::post('/UnitUsaha/update',[App\Http\Controllers\UnitUsahaController::class, 'update']);
 Route::get('/UnitUsaha/hapus/{id_usaha}',[App\Http\Controllers\UnitUsahaController::class, 'hapus']);
+
+Route::get('/koperasi', [App\Http\Controllers\koperasiController::class, 'index']);
+Route::get('/koperasi/tambah',[App\Http\Controllers\koperasiController::class, 'tambah']);
+Route::post('/koperasi/store',[App\Http\Controllers\koperasiController::class, 'store']);
+Route::get('/koperasi/edit/{id_koperasi}',[App\Http\Controllers\koperasiController::class, 'edit']);
+Route::post('/koperasi/update',[App\Http\Controllers\koperasiController::class, 'update']);
+Route::get('/koperasi/hapus/{id_koperasi}',[App\Http\Controllers\koperasiController::class, 'hapus']);

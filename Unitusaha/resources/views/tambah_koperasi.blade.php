@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-<form action="/UnitUsaha/store" method="post">
+<form action="/koperasi/store" method="post">
 		{{ csrf_field() }}
-		nama_usaha <input type="text" name="nama_usaha" required="required"> <br/>
+
+		id_koperasi <input type="text" name="id_koperasi" required="required"> <br/>
+		nama_koperasi <input type="text" name="nama_koperasi" required="required"> <br/>
         alamat <input type="text" name="alamat" required="required"> <br/>
-        telepon <input type="text" name="telepon" required="required"> <br/>
-        jenis_usaha <input type="text" name="jenis_usaha" required="required"> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>
 </body>
