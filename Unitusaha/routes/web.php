@@ -39,6 +39,13 @@ Route::get('/tambah_koperasi', function () {
     return view('tambah_koperasi');
 });
 
+Route::get('/transaksi', function () {
+    return view('transaksi');
+});
+
+Route::get('/tambaht', function () {
+    return view('tambaht');
+});
 
 Route::get('/UnitUsaha', 'App\Http\Controllers\usahaController@index');
 Route::get('/UnitUsaha/tambah','App\Http\Controllers\usahaController@tambah');
@@ -60,3 +67,10 @@ Route::post('/koperasi/store',[App\Http\Controllers\koperasiController::class, '
 Route::get('/koperasi/edit/{id_koperasi}',[App\Http\Controllers\koperasiController::class, 'edit']);
 Route::post('/koperasi/update',[App\Http\Controllers\koperasiController::class, 'update']);
 Route::get('/koperasi/hapus/{id_koperasi}',[App\Http\Controllers\koperasiController::class, 'hapus']);
+
+Route::get('/transaksi', [App\Http\Controllers\TransaksiController::class, 'index']);
+Route::get('/transaksi/tambaht',[App\Http\Controllers\TransaksiController::class, 'tambaht']);
+Route::post('/transaksi/store',[App\Http\Controllers\TransaksiController::class, 'store']);
+Route::get('/transaksi/editt/{id_transaksi}',[App\Http\Controllers\TransaksiController::class, 'editt']);
+Route::post('/transaksi/update',[App\Http\Controllers\TransaksiController::class, 'update']);
+Route::get('/transaksi/hapus/{id_transaksi}',[App\Http\Controllers\TransaksiController::class, 'hapus']);
