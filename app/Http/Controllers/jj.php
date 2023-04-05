@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-class UnitusahaController extends Controller
+class UnitUsahaController extends Controller
 {
     public function index()
     {

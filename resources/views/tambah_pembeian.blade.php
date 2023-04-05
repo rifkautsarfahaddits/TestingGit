@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="/UnitUsaha/store" method="post">
+<form action="/pembelian/store" method="post">
 		{{ csrf_field() }}
 
 		id_pembelian <input type="text" name="id_pembelian" required="required"> <br/>

@@ -13,35 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/usaha', function () {
-    return view('usaha');
-});
+//Route::get('/welcome', [App\Http\Controllers\pembelianContror::class, 'welcome']);
 
-Route::get('/tambah', function () {
-    return view('tambah');
-});
-
-
-
-Route::get('/UnitUsaha', function () {
-    return view('UnitUsaha');
+Route::get('/tambah_pembelian', function () {
+    return view('tambah_pembelian');
 });
 
 
-Route::get('/UnitUsaha', 'App\Http\Controllers\usahaController@index');
-Route::get('/UnitUsaha/tambah','App\Http\Controllers\usahaController@tambah');
-Route::post('/UnitUsaha/store','App\Http\Controllers\usahaController@store');
-Route::get('/UnitUsaha/edit/{id_usaha}','App\Http\Controllers\usahaController@edit');
-Route::post('/UnitUsaha/update','App\Http\Controllers\usahaController@update');
-Route::get('/UnitUsaha/hapus/{id_usaha}','App\Http\Controllers\usahaController@hapus');
-
-Route::get('/UnitUsaha', [App\Http\Controllers\UnitUsahaController::class, 'index']);
-Route::get('/UnitUsaha/tambah',[App\Http\Controllers\UnitUsahaController::class, 'tambah']);
-Route::post('/UnitUsaha/store',[App\Http\Controllers\UnitUsahaController::class, 'store']);
-Route::get('/UnitUsaha/edit/{id_usaha}',[App\Http\Controllers\UnitUsahaController::class, 'edit']);
-Route::post('/UnitUsaha/update',[App\Http\Controllers\UnitUsahaController::class, 'update']);
-Route::get('/UnitUsaha/hapus/{id_usaha}',[App\Http\Controllers\UnitUsahaController::class, 'hapus']);
+Route::get('/pembelian', [App\Http\Controllers\pembelianController::class, 'index']);
+Route::get('/pembelian/tambah',[App\Http\Controllers\pembelianController::class, 'tambah']);
+Route::post('/pembelian/store',[App\Http\Controllers\pembelianController::class, 'store']);
+Route::get('/pembelian/edit/{id_pembelian}',[App\Http\Controllers\pembelianController::class, 'edit']);
+Route::post('/pembelian/update',[App\Http\Controllers\pembelianController::class, 'update']);
+Route::get('/pembelian/hapus/{id_pembelian}',[App\Http\Controllers\pembelianController::class, 'hapus']);

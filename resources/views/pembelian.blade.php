@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-	<button><a href="/tambah">Tambah</a></button>
+	<button><a href="/tambah_pembelian">Tambah</a></button>
 <table border="1">
 		<tr>
 			<th>id_pembelian</th>
@@ -18,20 +18,20 @@
 			<th>harga_beli</th>
 			<th>total_pembelian</th>
 		</tr>
-		@foreach($pembelian as $u)
+		@foreach($pembelian as $p)
 		<tr>
-			<td>{{ $u->id_pembelian }}</td>
-			<td>{{ $u->tgl_pembelian }}</td>
-			<td>{{ $u->id_supplier }}</td>
-			<td>{{ $u->id_barang }}</td>
-            <td>{{ $u->jumlah_barang }}</td>
-			<td>{{ $u->harga_beli }}</td>
-			<td>{{ $u->total_pembelian }}</td>
+			<td>{{ $p->id_pembelian }}</td>
+			<td>{{ $p->tgl_pembelian }}</td>
+			<td>{{ $p->id_supplier }}</td>
+			<td>{{ $p->id_barang }}</td>
+            <td>{{ $p->jumlah_barang }}</td>
+			<td>{{ $p->harga_beli }}</td>
+			<td>{{ $p->total_pembelian }}</td>
 
 			<td>
-				<a href="/UnitUsaha/edit/{{ $u->id_pembelian }}">Edit</a>
+				<a href="/pembelian/edit/{{ $p->id_pembelian }}">Edit</a>
 
-				<a href="/UnitUsaha/hapus/{{ $u->id_pembelian }}">Hapus</a>
+				<a href="/pembelian/hapus/{{ $p->id_pembelian }}">Hapus</a>
 			</td>
 		</tr>
 		@endforeach

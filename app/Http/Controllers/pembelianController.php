@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 
-class UnitusahaController extends Controller
+class pembelianController extends Controller
 {
     public function index()
     {
@@ -14,14 +14,14 @@ class UnitusahaController extends Controller
     	 $pembelian = DB::table('pembelian')->get();
  
     	// mengirim data 'usaha ke view index
-    	return view('UnitUsaha',[ 'pembelian' =>  $pembelian]);
+    	return view('pembelian',[ 'pembelian' =>  $pembelian]);
  
     }
     public function tambah()
     {
     
         // memanggil view tambah
-        return view('tambah');
+        return view('tambah_pembelian');
     
     }
 
@@ -39,7 +39,7 @@ class UnitusahaController extends Controller
             'total_pembelian' => $request->total_pembelian,
         ]);
         // alihkan halaman ke halaman usaha
-        return redirect('/UnitUsaha');
+        return redirect('/pembelian');
     
     }
     // method untuk edit data usaha
@@ -48,7 +48,7 @@ class UnitusahaController extends Controller
         // mengambil data usaha berdasarkan id yang dipilih
         $pembelian = DB::table('pembelian')->where('id_pembelian',$id_pembelian)->get();
         // passing data usaha yang didapat ke view edit.blade.php
-        return view('edit',['pembelian' => $pembelian]);
+        return view('edit_pembelian',['pembelian' => $pembelian]);
     
     }
 
@@ -66,7 +66,7 @@ class UnitusahaController extends Controller
             'total_pembelian' => $request->total_pembelian,
         ]);
         // alihkan halaman ke halaman usaha
-        return redirect('/UnitUsaha');
+        return redirect('/pembelian');
     }
 
     // method untuk hapus data usaha
@@ -76,6 +76,6 @@ class UnitusahaController extends Controller
         DB::table('pembelian')->where('id_pembelian',$id_pembelian)->delete();
             
         // alihkan halaman ke halaman usaha
-        return redirect('/UnitUsaha');
+        return redirect('/pembelian');
     }
 }
