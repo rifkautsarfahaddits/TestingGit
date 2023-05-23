@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Apr 2023 pada 19.39
--- Versi server: 10.4.24-MariaDB
--- Versi PHP: 8.1.6
+-- Waktu pembuatan: 23 Bulan Mei 2023 pada 13.36
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,7 +35,7 @@ CREATE TABLE `anggota` (
   `email` varchar(25) NOT NULL,
   `jenis_kelamin` varchar(24) NOT NULL,
   `status` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `anggota`
@@ -63,7 +63,7 @@ CREATE TABLE `barang` (
   `stok_barang` int(25) NOT NULL,
   `harga_beli` int(50) NOT NULL,
   `harga_jual` int(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -75,7 +75,15 @@ CREATE TABLE `koperasi` (
   `id_koperasi` int(20) NOT NULL,
   `nama_koperasi` varchar(100) NOT NULL,
   `alamat` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `koperasi`
+--
+
+INSERT INTO `koperasi` (`id_koperasi`, `nama_koperasi`, `alamat`) VALUES
+(1, 'Zami', 'Mangga'),
+(3, 'duren', 'jonggol');
 
 -- --------------------------------------------------------
 
@@ -91,7 +99,7 @@ CREATE TABLE `pembelian` (
   `jumlah_barang` int(50) NOT NULL,
   `harga_beli` int(50) NOT NULL,
   `total_pembelian` int(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -106,7 +114,7 @@ CREATE TABLE `penjualan` (
   `jumlah_barang` int(50) NOT NULL,
   `harga_jual` int(50) NOT NULL,
   `total_penjualan` int(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -121,7 +129,7 @@ CREATE TABLE `transaksi` (
   `id_anggota` int(20) NOT NULL,
   `id_usaha` int(20) NOT NULL,
   `nominal` int(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -135,14 +143,16 @@ CREATE TABLE `usaha` (
   `alamat` varchar(150) NOT NULL,
   `telepon` int(50) NOT NULL,
   `jenis_usaha` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `usaha`
 --
 
 INSERT INTO `usaha` (`id_usaha`, `nama_usaha`, `alamat`, `telepon`, `jenis_usaha`) VALUES
-(1, 'Deplok', 'Sampangan', 0, 'e');
+(1, 'Mieku', 'Semarang', 8888, 'Makanan'),
+(8, 'sekolah', 'bandung', 3333, 'ibibdq'),
+(9, 'Miekutol', 'Samkoa', 1111, 'Makanan');
 
 --
 -- Indexes for dumped tables
@@ -204,13 +214,13 @@ ALTER TABLE `anggota`
 -- AUTO_INCREMENT untuk tabel `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_barang` int(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `koperasi`
 --
 ALTER TABLE `koperasi`
-  MODIFY `id_koperasi` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_koperasi` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `pembelian`
@@ -234,7 +244,7 @@ ALTER TABLE `transaksi`
 -- AUTO_INCREMENT untuk tabel `usaha`
 --
 ALTER TABLE `usaha`
-  MODIFY `id_usaha` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_usaha` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
