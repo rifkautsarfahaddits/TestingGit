@@ -30,21 +30,23 @@ class UnitusahaController extends Controller
     {
         // insert data ke table usaha
         DB::table('usaha')->insert([
+            'id_usaha' => $request->id_usaha,
             'nama_usaha' => $request->nama_usaha,
             'alamat' => $request->alamat,
             'telepon' => $request->telepon,
             'jenis_usaha' => $request->jenis_usaha,
+            
         ]);
         // alihkan halaman ke halaman usaha
         return redirect('/UnitUsaha');
     
     }
     // method untuk edit data usaha
-    public function edit($Id_usaha)
+    public function edit($id_usaha)
     {
         // mengambil data usaha berdasarkan id yang dipilih
-        $usaha = DB::table('usaha')->where('Id_usaha',$Id_usaha)->get();
-        // passing data usaha yang didapat ke view edit.blade.php
+        $usaha = DB::table('usaha')->where('id_usaha',$id_usaha)->get();
+        // passing data koperasi yang didapat ke view edit.blade.php
         return view('edit',['usaha' => $usaha]);
     
     }
@@ -58,6 +60,7 @@ class UnitusahaController extends Controller
             'alamat' => $request->alamat,
             'telepon' => $request->telepon,
             'jenis_usaha' => $request->jenis_usaha,
+            
         ]);
         // alihkan halaman ke halaman usaha
         return redirect('/UnitUsaha');

@@ -39,6 +39,22 @@ Route::get('/tambah_koperasi', function () {
     return view('tambah_koperasi');
 });
 
+Route::get('/transaksi', function () {
+    return view('transaksi');
+});
+
+Route::get('/tambaht', function () {
+    return view('tambaht');
+});
+
+Route::get('/Barang', function () {
+    return view('Barang');
+});
+
+Route::get('/tambah_barang', function () {
+    return view('tambah_barang');
+});
+
 
 Route::get('/UnitUsaha', 'App\Http\Controllers\usahaController@index');
 Route::get('/UnitUsaha/tambah','App\Http\Controllers\usahaController@tambah');
@@ -60,3 +76,18 @@ Route::post('/koperasi/store',[App\Http\Controllers\koperasiController::class, '
 Route::get('/koperasi/edit/{id_koperasi}',[App\Http\Controllers\koperasiController::class, 'edit']);
 Route::post('/koperasi/update',[App\Http\Controllers\koperasiController::class, 'update']);
 Route::get('/koperasi/hapus/{id_koperasi}',[App\Http\Controllers\koperasiController::class, 'hapus']);
+
+
+Route::get('/Barang', [App\Http\Controllers\BarangController::class, 'index']);
+Route::get('/Barang/tambah',[App\Http\Controllers\BarangController::class, 'tambah']);
+Route::post('/Barang/store',[App\Http\Controllers\BarangController::class, 'store']);
+Route::get('/Barang/edit/{id_koperasi}',[App\Http\Controllers\BarangController::class, 'edit']);
+Route::post('/Barang/update',[App\Http\Controllers\BarangController::class, 'update']);
+Route::get('/Barang/hapus/{id_koperasi}',[App\Http\Controllers\BarangController::class, 'hapus']);
+Route::get('/transaksi', [App\Http\Controllers\TransaksiController::class, 'index']);
+Route::get('/transaksi/tambaht',[App\Http\Controllers\TransaksiController::class, 'tambaht']);
+Route::post('/transaksi/store',[App\Http\Controllers\TransaksiController::class, 'store']);
+Route::get('/transaksi/editt/{id_transaksi}',[App\Http\Controllers\TransaksiController::class, 'editt']);
+Route::post('/transaksi/update',[App\Http\Controllers\TransaksiController::class, 'update']);
+Route::get('/transaksi/hapus/{id_transaksi}',[App\Http\Controllers\TransaksiController::class, 'hapus']);
+

@@ -9,11 +9,10 @@
 <body>
 <form action="/UnitUsaha/store" method="post">
 		{{ csrf_field() }}
-
 		nama_usaha <input type="text" name="nama_usaha" required="required"> <br/>
-		alamat <input type="text" name="alamat" required="required"> <br/>
+        alamat <input type="text" name="alamat" required="required"> <br/>
         telepon <input type="text" name="telepon" required="required"> <br/>
-        jenis_usaha<input type="text" name="jenis_usaha" required="required"> <br/>
+        jenis_usaha <input type="text" name="jenis_usaha" required="required"> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>
 </body>
