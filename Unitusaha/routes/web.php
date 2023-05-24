@@ -25,7 +25,9 @@ Route::get('/tambah', function () {
     return view('tambah');
 });
 
-
+Route::get('/penjualan', function () {
+    return view('penjualan');
+});
 
 Route::get('/UnitUsaha', function () {
     return view('UnitUsaha');
@@ -55,6 +57,14 @@ Route::get('/tambah_barang', function () {
     return view('tambah_barang');
 });
 
+//Route::get('/penjualan', 'App\Http\Controllers\PenjualanController@index');
+
+Route::get('/penjualan', [App\Http\Controllers\PenjualanController::class, 'index']);
+Route::get('/penjualan/tambah', [App\Http\Controllers\PenjualanController::class, 'tambah']);
+Route::post('/penjualan/store', [App\Http\Controllers\PenjualanController::class, 'store']);
+Route::get('/penjualan/edit', [App\Http\Controllers\PenjualanController::class, 'edit']);
+Route::post('/penjualan/update', [App\Http\Controllers\PenjualanController::class, 'update']);
+Route::get('/penjualan/hapus', [App\Http\Controllers\PenjualanController::class, 'hapus']);
 
 Route::get('/UnitUsaha', 'App\Http\Controllers\usahaController@index');
 Route::get('/UnitUsaha/tambah','App\Http\Controllers\usahaController@tambah');
