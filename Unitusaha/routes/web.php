@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('base');
 });
 
 Route::get('/usaha', function () {
@@ -55,6 +55,14 @@ Route::get('/Barang', function () {
 
 Route::get('/tambah_barang', function () {
     return view('tambah_barang');
+});
+
+Route::get('/pembelian', function () {
+    return view('pembelian');
+});
+
+Route::get('/tambah_pembelian', function () {
+    return view('tambah_pembelian');
 });
 
 //Route::get('/penjualan', 'App\Http\Controllers\PenjualanController@index');
@@ -100,4 +108,11 @@ Route::post('/transaksi/store',[App\Http\Controllers\TransaksiController::class,
 Route::get('/transaksi/editt/{id_transaksi}',[App\Http\Controllers\TransaksiController::class, 'editt']);
 Route::post('/transaksi/update',[App\Http\Controllers\TransaksiController::class, 'update']);
 Route::get('/transaksi/hapus/{id_transaksi}',[App\Http\Controllers\TransaksiController::class, 'hapus']);
+
+Route::get('/pembelian', [App\Http\Controllers\pembelianController::class, 'index']);
+Route::get('/pembelian/tambah',[App\Http\Controllers\pembelianController::class, 'tambah']);
+Route::post('/pembelian/store',[App\Http\Controllers\pembelianController::class, 'store']);
+Route::get('/pembelian/edit/{id_pembelian}',[App\Http\Controllers\pembelianController::class, 'edit']);
+Route::post('/pembelian/update',[App\Http\Controllers\pembelianController::class, 'update']);
+Route::get('/pembelian/hapus/{id_pembelian}',[App\Http\Controllers\pembelianController::class, 'hapus']);
 
