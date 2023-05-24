@@ -17,7 +17,7 @@
         jumlah_barang <input type="text" name="jumlah_barang" required="required"> <br/>
         harga_beli <input type="text" name="harga_beli" required="required"> <br/>
         total_pembelian <input type="text" name="total_pembelian" required="required"> <br/>
-		<input type="submit" value="Simpan Data">
+		<input type=S"submit" value="Simpan Data">
 	</form>
 </body>
 </html

@@ -31,8 +31,8 @@ class PenjualanController extends Controller
     public function store(Request $request)
     {
         // insert data ke table barang
-        DB::table('barang')->insert([
-            'id_barang' => $request->id_penjualan,
+        DB::table('penjualan')->insert([
+            'id_penjualan' => $request->id_penjualan,
             'tgl_penjualan' => $request->tgl_penjualan,
             'id_barang' => $request->id_barang,
             'jumlah_barang' => $request->jumlah_barang,
@@ -56,15 +56,15 @@ class PenjualanController extends Controller
     public function update(Request $request)
     {
         // update data barang
-        DB::table('barang')->where('id_barang',$request->id_barang)->update([
-            'nama_barang' => $request->nama_barang,
-            'jenis_barang' => $request->jenis_barang,
-            'stok_barang' => $request->stok_barang,
-            'harga_beli' => $request->harga_beli,
-            'harga_jual' => $request->harga_jual,
+        DB::table('penjualang')->where('id_penjualan',$request->id_penjualan)->update([
+            'id_penjualan' => $request->id_penjualan,
+            'tgl_penjualan' => $request->tgl_penjualan,
+            'id_barang' => $request->id_barang,
+            'jumlah_barang' => $request->jumlah_barang,
+            'total_penjualan' => $request->total_penjualan,
         ]);
         // alihkan halaman ke halaman barang
-        return redirect('/Barang');
+        return redirect('/penjualan');
     }
 
     // method untuk hapus data barang

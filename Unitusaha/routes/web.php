@@ -29,6 +29,10 @@ Route::get('/penjualan', function () {
     return view('penjualan');
 });
 
+Route::get('/tambah_penjualan', function () {
+    return view('tambah_penjualan');
+});
+
 Route::get('/UnitUsaha', function () {
     return view('UnitUsaha');
 });

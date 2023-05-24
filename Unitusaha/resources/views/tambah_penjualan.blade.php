@@ -10,12 +10,12 @@
 <form action="/penjualan/store" method="post">
 		{{ csrf_field() }}
 
-		id_barang <input type="text" name="id_barang" required="required"> <br/>
-		nama_barang <input type="text" name="nama_barang" required="required"> <br/>
-        jenis_barang <input type="text" name="jenis_barang" required="required"> <br/>
-        stok_barang <input type="text" name="stok_barang" required="required"> <br/>
-        harga_beli <input type="text" name="harga_beli" required="required"> <br/>
+		id_penjualan <input type="text" name="id_penjualan" required="required"> <br/>
+		tgl_penjualan <input type="text" name="tgl_penjualan" required="required"> <br/>
+        id_barang <input type="text" name="id_barang" required="required"> <br/>
+        jumlah_barang <input type="text" name="jumlah_barang" required="required"> <br/>
         harga_jual <input type="text" name="harga_jual" required="required"> <br/>
+        total_penjualan <input type="text" name="total_penjualan" required="required"> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>
 </body>

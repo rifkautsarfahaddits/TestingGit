@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-@foreach($usaha as $p)
+@foreach($penjualan as $p)
 <form action="/penjualan/update" method="post">
 	{{ csrf_field() }}
 	

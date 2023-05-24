@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-	<button><a href="/tambah_barang">Tambah</a></button>
+	<button><a href="/tambah_penjualan">Tambah</a></button>
 <table border="1">
 		<tr>
 			<th>id_penjualan</th>
@@ -16,6 +16,7 @@
             <th>jumlah_barang</th>
             <th>harga_jual</th>
 			<th>total_penjualan</th>
+			<th>opsi</th>
 		</tr>
 		@foreach($penjualan as $u)
 		<tr>
@@ -24,11 +25,12 @@
 			<td>{{ $u->id_barang }}</td>
 			<td>{{ $u->jumlah_barang }}</td>
             <td>{{ $u->harga_jual }}</td>
+			<th>total_penjualan</th>
 
 			<td>
-				<!--<a href="/penjualan/edit/{{ $u->id_penjualan }}">Edit</a>
+				<a href="/penjualan/edit/{{ $u->id_penjualan}}">Edit</a>
 
-				<a href="/penjualan/hapus/{{ $u->id_penjualan }}">Hapus</a>-->
+            <a href="/penjualan/hapus/{{ $u->id_penjualan }}">Hapus</a>
 			</td>
 		</tr>
 		@endforeach
