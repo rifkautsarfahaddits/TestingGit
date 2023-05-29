@@ -36,6 +36,7 @@ class PenjualanController extends Controller
             'tgl_penjualan' => $request->tgl_penjualan,
             'id_barang' => $request->id_barang,
             'jumlah_barang' => $request->jumlah_barang,
+            'harga_jual'  => $request->harga_jual,
             'total_penjualan' => $request->total_penjualan,
         ]);
         // alihkan halaman ke halaman barang
@@ -61,6 +62,7 @@ class PenjualanController extends Controller
             'tgl_penjualan' => $request->tgl_penjualan,
             'id_barang' => $request->id_barang,
             'jumlah_barang' => $request->jumlah_barang,
+            'harga_jual' => $request->harga_jual,
             'total_penjualan' => $request->total_penjualan,
         ]);
         // alihkan halaman ke halaman barang

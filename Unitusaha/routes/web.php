@@ -65,6 +65,14 @@ Route::get('/pembelian', function () {
     return view('pembelian');
 });
 
+Route::get('/anggota', function () {
+    return view('anggota');
+});
+
+Route::get('/tambah_anggota', function () {
+    return view('tambah_anggota');
+});
+
 Route::get('/tambah_pembelian', function () {
     return view('tambah_pembelian');
 });
@@ -76,7 +84,7 @@ Route::get('/penjualan/tambah', [App\Http\Controllers\PenjualanController::class
 Route::post('/penjualan/store', [App\Http\Controllers\PenjualanController::class, 'store']);
 Route::get('/penjualan/edit', [App\Http\Controllers\PenjualanController::class, 'edit']);
 Route::post('/penjualan/update', [App\Http\Controllers\PenjualanController::class, 'update']);
-Route::get('/penjualan/hapus', [App\Http\Controllers\PenjualanController::class, 'hapus']);
+Route::get('/penjualan/hapus/{id_penjualan}', [App\Http\Controllers\PenjualanController::class, 'hapus']);
 
 Route::get('/UnitUsaha', 'App\Http\Controllers\usahaController@index');
 Route::get('/UnitUsaha/tambah','App\Http\Controllers\usahaController@tambah');
@@ -120,3 +128,9 @@ Route::get('/pembelian/edit/{id_pembelian}',[App\Http\Controllers\pembelianContr
 Route::post('/pembelian/update',[App\Http\Controllers\pembelianController::class, 'update']);
 Route::get('/pembelian/hapus/{id_pembelian}',[App\Http\Controllers\pembelianController::class, 'hapus']);
 
+Route::get('/anggota', [App\Http\Controllers\anggotaController::class, 'index']);
+Route::get('/anggota/tambah',[App\Http\Controllers\anggotaController::class, 'tambah']);
+Route::post('/anggota/store',[App\Http\Controllers\anggotaController::class, 'store']);
+Route::get('/anggota/edit/{id_anggota}',[App\Http\Controllers\anggotaController::class, 'edit']);
+Route::post('/anggota/update',[App\Http\Controllers\anggotaController::class, 'update']);
+Route::get('/anggota/hapus/{id_anggota}',[App\Http\Controllers\anggotaController::class, 'hapus']);

@@ -31,7 +31,7 @@
 				<a href="/penjualan/edit/{{ $u->id_penjualan}}">Edit</a>
 
             <a href="/penjualan/hapus/{{ $u->id_penjualan }}">Hapus</a>
-			</td>
+		  </td>
 		</tr>
 		@endforeach
 	</table>
