@@ -207,7 +207,7 @@ Route::post('/anggota/update',[App\Http\Controllers\anggotaController::class, 'u
 Route::get('/anggota/hapus/{id_anggota}',[App\Http\Controllers\anggotaController::class, 'hapus']);
 
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'home'])->name('dashboard');
 
 
 
