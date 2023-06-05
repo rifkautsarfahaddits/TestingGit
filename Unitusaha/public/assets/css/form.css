@@ -1,0 +1,18 @@
+.row form{
+    text-align:end;
+    margin: 10px 30% 0 0;
+    font-weight: bold;
+
+}
+
+.row form input{
+    margin: 5px 0 5px 40px;
+    width: 8cm;
+}
+
+.row form input.simpan{
+    margin-top: 35px;
+    background-color: rgb(3, 78, 165);
+    color: white;
+    font-weight: bold;
+}
