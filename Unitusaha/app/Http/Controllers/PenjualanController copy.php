@@ -80,4 +80,3 @@ class PenjualanController extends Controller
     }
     
 }
-

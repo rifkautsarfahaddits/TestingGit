@@ -14,7 +14,7 @@ class BarangController extends Controller
  
     	// mengirim data 'barang ke view index
     	return view('Barang',[ 'barang' =>  $barang]);
- 
+
     }
     public function tambah()
     {

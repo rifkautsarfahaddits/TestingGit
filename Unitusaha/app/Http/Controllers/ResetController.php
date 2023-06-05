@@ -38,3 +38,4 @@ class ResetController extends Controller
         return view('session/reset-password/resetPassword', ['token' => $token]);
     }
 }
+

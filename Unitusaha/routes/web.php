@@ -208,3 +208,6 @@ Route::get('/anggota/hapus/{id_anggota}',[App\Http\Controllers\anggotaController
 
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+
+
