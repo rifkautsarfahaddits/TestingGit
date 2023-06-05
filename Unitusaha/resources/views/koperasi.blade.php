@@ -1,33 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-	<button><a href="/tambah_koperasi">Tambah</a></button>
-<table border="1">
-		<tr>
-			<th>id_koperasi</th>
-			<th>nama_koperasi</th>
-            <th>alamat</th>
-			<th>opsi</th>
-		</tr>
-		@foreach($koperasi as $k)
-		<tr>
-			<td>{{ $k->id_koperasi }}</td>
-			<td>{{ $k->nama_koperasi }}</td>
-			<td>{{ $k->alamat }}</td>
+@extends('layouts.user_type.auth')
+@section('content')
 
-			<td>
-				<a href="/koperasi/edit/{{ $k->id_koperasi }}">Edit</a>
+<div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4 mx-4">
+                <div class="card-header pb-0">
+                    <div class="d-flex flex-row justify-content-between">
+                        <div>
+                            <h5 class="mb-0">Tabel Koperasi</h5>
+                        </div>
+                        <a href="/tambah_koperasi" class="btn bg-gradient-primary btn-sm mb-0" type="button">+&nbsp; Tambah</a>
+                    </div>
+                </div>
+                <div class="card-body px-0 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        ID Koperasi
+                                    </th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                        Nama
+                                    </th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        Alamat
+                                    </th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        Opsi
+                                    </th>
+                                </tr>
+                            </thead>
 
-				<a href="/koperasi/hapus/{{ $k->id_koperasi }}">Hapus</a>
-			</td>
-		</tr>
-		@endforeach
-	</table>
-</body>
-</html>
+                            <tbody>
+								@foreach($koperasi as $k)
+                                <tr>
+                                    <td class="ps-4">
+                                        <p class="text-xs font-weight-bold mb-0">{{ $k->id_koperasi }}</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-xs font-weight-bold mb-0">{{ $k->nama_koperasi }}</p>
+                                    </td>
+                                    <td class="text-center">
+                                        <p class="text-xs font-weight-bold mb-0">{{ $k->alamat }}</p>
+                                    </td>
+                            
+                                    <td class="text-center">
+                                        <a href="/koperasi/edit/{{ $k->id_koperasi }}" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Edit data">
+                                            <i class="fas fa-user-edit text-secondary"></i>
+                                        </a>
+                                        <span>
+                                            <a href="/koperasi/hapus/{{ $k->id_koperasi }}" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Hapus data">
+                                                <i class="cursor-pointer fas fa-trash text-secondary"></i>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+@endsection
+
