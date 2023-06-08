@@ -10,6 +10,7 @@ class CreateFailedJobsTable extends Migration
      * Run the migrations.
      *
      * @return void
+     * 
      */
     public function up()
     {

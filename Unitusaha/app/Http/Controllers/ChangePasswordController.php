@@ -39,3 +39,4 @@ class ChangePasswordController extends Controller
                     : back()->withErrors(['email' => [__($status)]]);
     }
 }
+

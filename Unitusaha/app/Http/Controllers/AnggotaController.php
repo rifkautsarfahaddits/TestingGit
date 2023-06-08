@@ -51,7 +51,6 @@ class AnggotaController extends Controller
         $anggota = DB::table('anggota')->where('id_anggota',$id_anggota)->get();
         // passing data barang yang didapat ke view edit.blade.php
         return view('edit_anggota',['anggota' => $anggota]);
-    
     }
 
     // update data barang

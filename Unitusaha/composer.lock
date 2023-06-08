@@ -94,6 +94,7 @@
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
+                
             ],
             "description": "Arbitrary-precision arithmetic library",
             "keywords": [

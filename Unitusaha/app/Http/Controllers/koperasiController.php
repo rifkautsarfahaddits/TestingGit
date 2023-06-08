@@ -72,3 +72,4 @@ class koperasiController extends Controller
         return redirect('/koperasi');
     }
 }
+

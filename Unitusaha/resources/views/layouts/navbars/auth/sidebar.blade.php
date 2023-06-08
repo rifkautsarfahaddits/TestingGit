@@ -73,7 +73,7 @@
 
       <!-- SAMPING KIRI TABEL ANGGOTA -->
       <li class="nav-item pb-2">
-        <a class="nav-link {{ (Request::is('#') ? 'active' : '') }}" href="{{ url('#') }}">
+        <a class="nav-link {{ (Request::is('UnitUsaha') ? 'active' : '') }}" href="{{ url('/UnitUsaha') }}">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i style="font-size: 1rem;" class="fas fa-lg fa-list-ul ps-2 pe-2 text-center text-dark {{ (Request::is('user-management') ? 'text-white' : 'text-dark') }} " aria-hidden="true"></i>
             </div>
@@ -88,7 +88,7 @@
 
       <!-- SAMPING KIRI TABEL -->
       <li class="nav-item">
-        <a class="nav-link {{ (Request::is('') ? 'active' : '') }}" href="{{ url('#') }}">
+        <a class="nav-link {{ (Request::is('') ? 'active' : '') }}" href="{{ url('/Barang') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <title>office</title>
@@ -109,7 +109,7 @@
       </li>
       <!-- SAMPING KIRI TABEL -->
       <li class="nav-item">
-        <a class="nav-link {{ (Request::is('#') ? 'active' : '') }}" href="{{ url('#') }}">
+        <a class="nav-link {{ (Request::is('/penjualan') ? 'active' : '') }}" href="{{ url('/penjualan') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <title>office</title>
@@ -130,7 +130,7 @@
       </li>
       <!-- SAMPING KIRI TABEL -->
       <li class="nav-item">
-        <a class="nav-link {{ (Request::is('') ? 'active' : '') }}" href="{{ url('') }}">
+        <a class="nav-link {{ (Request::is('/pembelian') ? 'active' : '') }}" href="{{ url('/pembelian') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <title>office</title>
@@ -151,7 +151,7 @@
       </li>
       <!-- SAMPING KIRI TABEL -->
       <li class="nav-item">
-        <a class="nav-link {{ (Request::is('') ? 'active' : '') }}" href="{{ url('') }}">
+        <a class="nav-link {{ (Request::is('/transaksi') ? 'active' : '') }}" href="{{ url('/transaksi') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <title>office</title>
