@@ -16,11 +16,11 @@ class BarangController extends Controller
     	return view('Barang',[ 'barang' =>  $barang]);
 
     }
-    public function tambah()
+    public function tambah_Barang()
     {
     
         // memanggil view tambah
-        return view('tambah');
+        return view('tambah_Barang');
     
     }
 

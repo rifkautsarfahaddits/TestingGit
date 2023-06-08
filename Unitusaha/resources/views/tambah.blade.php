@@ -9,7 +9,7 @@
                 <div class="card-header pb-0">
                     <div class="d-flex flex-row justify-content-between">
                         <div>
-                            <h5 class="mb-0">Tambah UnitUsaha</h5>
+                            <h5 class="mb-0">Tambah Unit Usaha</h5>
                         </div>
                     </div>
                 </div>
@@ -17,6 +17,7 @@
                 <form action="/usaha/store" method="post">
                         {{ csrf_field() }}
 
+                        id_usaha <input type="text" name="id_isaha" required="required"> <br/>
                         nama_usaha <input type="text" name="nama_usaha" required="required"> <br/>
                         alamat <input type="text" name="alamat" required="required"> <br/>
                         telepon <input type="text" name="telepon" required="required"> <br/>

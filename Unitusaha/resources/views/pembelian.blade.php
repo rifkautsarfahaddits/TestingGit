@@ -1,41 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-	<button><a href="/tambah_pembelian">Tambah</a></button>
-<table border="1">
-		<tr>
-			<th>id_pembelian</th>
-			<th>tgl_pembelian</th>
-            <th>id_supplier</th>
-            <th>id_barang</th>
-            <th>jumlah_barang</th>
-            <th>harga_beli</th>
-			<th>total_pembelian</th>
-            <th>opsi</th>
-		</tr>
-		@foreach($pembelian as $u)
-		<tr>
-			<td>{{ $u->id_pembelian }}</td>
-			<td>{{ $u->tgl_pembelian }}</td>
-            <td>{{ $u->id_supplier }}</td>
-			<td>{{ $u->id_barang }}</td>
-			<td>{{ $u->jumlah_barang }}</td>
-            <td>{{ $u->harga_beli }}</td>
-            <td>{{ $u->total_pembelian }}</td>
+@extends('layouts.user_type.auth')
+@section('content')<!DOCTYPE html>
 
-			<td>
-            <a href="/pembelian/edit/{{ $u->id_pembelian}}">Edit</a>
+<div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4 mx-4">
+                <div class="card-header pb-0">
+                    <div class="d-flex flex-row justify-content-between">
+                        <div>
+                            <h5 class="mb-0">Tabel pembelian</h5>
+                        </div>
+                        <a href="/tambah_pembelian" class="btn bg-gradient-primary btn-sm mb-0" type="button">+&nbsp; Tambah</a>
+                    </div>
+                </div>
+                <div class="card-body px-0 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+									id_pembelian
+                                    </th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+									tgl_pembelian
+                                    </th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+									id_supplier
+                                    </th>
+									<th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+									id_barang
+									</th>
+									<th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+									jumlah_barang
+									</th>
+									<th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+									harga_beli
+									</th>
+									<th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+									total_pembelian
+                                    </th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        Opsi
+                                    </th>
+                                </tr>
+                            </thead>
 
-            <a href="/pembelian/hapus/{{ $u->id_pembelian }}">Hapus</a>
-         </td>
-		</tr>
-		@endforeach
-	</table>
-</body>
-</html>
+                            <tbody>
+								@foreach($pembelian as $k)
+                                <tr>
+                                    <td class="ps-4">
+                                        <p class="text-xs font-weight-bold mb-0">{{ $k->id_pembelian }}</p>
+                                    </td>
+                                    <td>
+                                        <p class="text-xs font-weight-bold mb-0">{{ $k->tgl_pembelian }}</p>
+                                    </td>
+                                    <td class="text-center">
+                                        <p class="text-xs font-weight-bold mb-0">{{ $k->id_supplier }}</p>
+                                    </td>
+									<td class="text-center">
+                                        <p class="text-xs font-weight-bold mb-0">{{ $k->id_barang }}</p>
+                                    </td>
+									<td class="text-center">
+                                        <p class="text-xs font-weight-bold mb-0">{{ $k->jumlah_barang }}</p>
+                                    </td>
+									<td class="text-center">
+                                        <p class="text-xs font-weight-bold mb-0">{{ $k->harga_beli }}</p>
+                                    </td>
+									<td class="text-center">
+                                        <p class="text-xs font-weight-bold mb-0">{{ $k->total_pembelian }}</p>
+                                    </td>
+                            
+                                    <td class="text-center">
+                                        <a href="/pembelian/edit/{{ $k->id_pembelian }}" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Edit data">
+                                            <i class="fas fa-user-edit text-secondary"></i>
+                                        </a>
+                                        <span>
+                                            <a href="/pembelian/hapus/{{ $k->id_pembelian }}" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Hapus data">
+                                                <i class="cursor-pointer fas fa-trash text-secondary"></i>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+@endsection

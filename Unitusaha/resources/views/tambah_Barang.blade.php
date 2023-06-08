@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
-                <form action="/barang/store" method="post">
+                <form action="/Barang/tambah" method="post">
                         {{ csrf_field() }}
 
                         id_barang <input type="text" name="id_barang" required="required"> <br/>
@@ -22,7 +22,7 @@
                         stok_barang <input type="text" name="stok_barang" required="required"> <br/>
                         harga_beli <input type="text" name="harga_beli" required="required"> <br/>
                         harga_jual <input type="text" name="harga_jual" required="required"> <br/>
-                        <input type="submit" value="Simpan Data">
+                        <input class="simpan" type="submit" value="Simpan Data">
                     </form>
                 </div>
             </div>
@@ -33,7 +33,6 @@
 
 @endsection
 
+                       
+
 		
-	</form>
-</body>
-</html>

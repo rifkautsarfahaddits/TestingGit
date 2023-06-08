@@ -180,13 +180,13 @@ Route::get('/koperasi/hapus/{id_koperasi}',[App\Http\Controllers\koperasiControl
 
 
 Route::get('/Barang', [App\Http\Controllers\BarangController::class, 'index']);
-Route::get('/Barang/tambah',[App\Http\Controllers\BarangController::class, 'tambah']);
+Route::get('/Barang/tambah',[App\Http\Controllers\BarangController::class, 'tambah_Barang']);
 Route::post('/Barang/store',[App\Http\Controllers\BarangController::class, 'store']);
 Route::get('/Barang/edit/{id_koperasi}',[App\Http\Controllers\BarangController::class, 'edit']);
 Route::post('/Barang/update',[App\Http\Controllers\BarangController::class, 'update']);
 Route::get('/Barang/hapus/{id_koperasi}',[App\Http\Controllers\BarangController::class, 'hapus']);
 Route::get('/transaksi', [App\Http\Controllers\TransaksiController::class, 'index']);
-Route::get('/transaksi/tambaht',[App\Http\Controllers\TransaksiController::class, 'tambaht']);
+Route::get('/transaksi/tambah',[App\Http\Controllers\TransaksiController::class, 'tambah']);
 Route::post('/transaksi/store',[App\Http\Controllers\TransaksiController::class, 'store']);
 Route::get('/transaksi/editt/{id_transaksi}',[App\Http\Controllers\TransaksiController::class, 'editt']);
 Route::post('/transaksi/update',[App\Http\Controllers\TransaksiController::class, 'update']);
