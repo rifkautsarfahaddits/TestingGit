@@ -13,8 +13,6 @@
                   <h3 class="font-weight-bolder text-info text-gradient">Selamat Datang!</h3>
                   <p class="mb-0">Koperasi Makmur Jaya<br></p>
                   <p class="mb-0">Satu Langkah Bersama Koperasi Makmur Jaya</p>
-                  <p class="mb-0">Email <b>admin@softui.com</b></p>
-                  <p class="mb-0">Password <b>secret</b></p>
                 </div>
                 <div class="card-body">
                   <form role="form" method="POST" action="/session">
