@@ -140,12 +140,30 @@ Route::get('/anggota', function () {
     return view('anggota');
 });
 
+Route::get('/buku_zami', function () {
+    return view('buku_zami');
+});
+
+Route::get('/kategori_zami', function () {
+    return view('kategori_zami');
+});
+
+
+
 Route::get('/tambah_anggota', function () {
     return view('tambah_anggota');
 });
 
 Route::get('/tambah_pembelian', function () {
     return view('tambah_pembelian');
+});
+
+Route::get('/tambah_buku_zami', function () {
+    return view('tambah_buku_zami');
+});
+
+Route::get('/tambah_kategori_zami', function () {
+    return view('tambah_kategori_zami');
 });
 
 //Route::get('/penjualan', 'App\Http\Controllers\PenjualanController@index');
@@ -210,4 +228,17 @@ Route::get('/anggota/hapus/{id_anggota}',[App\Http\Controllers\anggotaController
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'home'])->name('dashboard');
 
 
+Route::get('/buku_zami', [App\Http\Controllers\buku_zamiController::class, 'index']);
+Route::get('/buku_zami/tambah',[App\Http\Controllers\buku_zamiController::class, 'tambah']);
+Route::post('/buku_zami/store',[App\Http\Controllers\buku_zamiController::class, 'store']);
+Route::get('/buku_zami/edit/{IDBuku}',[App\Http\Controllers\buku_zamiController::class, 'edit']);
+Route::post('/buku_zami/update',[App\Http\Controllers\buku_zamiController::class, 'update']);
+Route::get('/buku_zami/hapus/{IDBuku}',[App\Http\Controllers\buku_zamiController::class, 'hapus']);
 
+
+Route::get('/kategori_zami', [App\Http\Controllers\kategori_zamiController::class, 'index']);
+Route::get('/kategori_zami/tambah',[App\Http\Controllers\kategori_zamiController::class, 'tambah']);
+Route::post('/kategori_zami/store',[App\Http\Controllers\kategori_zamiController::class, 'store']);
+Route::get('/kategori_zami/edit/{IDKategori}',[App\Http\Controllers\kategori_zamiController::class, 'edit']);
+Route::post('/kategori_zami/update',[App\Http\Controllers\kategori_zamiController::class, 'update']);
+Route::get('/kategori_zami/hapus/{IDKategori}',[App\Http\Controllers\kategori_zamiController::class, 'hapus']);
