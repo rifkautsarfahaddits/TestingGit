@@ -33,7 +33,7 @@ class buku_zamiController extends Controller
             'Judul' => $request->Judul,
             'Penulis' => $request->Penulis,
             'Penerbit' => $request->Penerbit,
-            'TahunTertib' => $request->TahunTertib,
+            'TahunTerbit' => $request->TahunTerbit,
             'JumlahStok' => $request->JumlahStok,
             'dendabuku' => $request->dendabuku,
         ]);
@@ -58,8 +58,8 @@ class buku_zamiController extends Controller
         DB::table('buku_zami')->where('IDBuku',$request->IDBuku)->update([
             'Judul' => $request->Judul,
             'Penulis' => $request->Penulis,
-            'Penertib' => $request->Penertib,
-            'TahunTertib' => $request->TahunTertib,
+            'Penerbit' => $request->Penerbit,
+            'TahunTerbit' => $request->TahunTerbit,
             'JumlahStok' => $request->JumlahStok,
             'dendabuku' => $request->dendabuku,
         ]);
