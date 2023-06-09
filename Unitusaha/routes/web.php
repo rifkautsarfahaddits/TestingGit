@@ -148,6 +148,9 @@ Route::get('/tambah_pembelian', function () {
     return view('tambah_pembelian');
 });
 
+Route::get('/buku', function () {
+    return view('buku');
+});
 //Route::get('/penjualan', 'App\Http\Controllers\PenjualanController@index');
 
 Route::get('/penjualan', [App\Http\Controllers\PenjualanController::class, 'index']);
