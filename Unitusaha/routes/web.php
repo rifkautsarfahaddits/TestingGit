@@ -7,6 +7,7 @@ use App\Http\Controllers\InfoUserController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ResetController;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\buku_zamiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 
@@ -209,6 +210,12 @@ Route::get('/anggota/edit/{id_anggota}',[App\Http\Controllers\anggotaController:
 Route::post('/anggota/update',[App\Http\Controllers\anggotaController::class, 'update']);
 Route::get('/anggota/hapus/{id_anggota}',[App\Http\Controllers\anggotaController::class, 'hapus']);
 
+Route::get('/buku_zami', [App\Http\Controllers\buku_zamiController::class, 'index']);
+Route::get('/buku_zami/tambah',[App\Http\Controllers\buku_zamiController::class, 'tambahbuku_zami']);
+Route::post('/buku_zami/store',[App\Http\Controllers\buku_zamiController::class, 'store']);
+Route::get('/buku_zami/edit/{IDBuku}',[App\Http\Controllers\buku_zamiController::class, 'edit']);
+Route::post('/buku_zami/update',[App\Http\Controllers\buku_zamiController::class, 'update']);
+Route::get('/buku_zami/hapus/{IDBuku}',[App\Http\Controllers\buku_zamiController::class, 'hapus']);
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'home'])->name('dashboard');
 
