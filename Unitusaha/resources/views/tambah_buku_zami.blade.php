@@ -16,7 +16,7 @@
                 <form action="/buku_zami/store" method="post">
                         {{ csrf_field() }}
 
-                       IDBuku <input type="text" name="IDBuku" required="required"> <br/>
+                        IDBuku <input type="text" name="IDBuku" required="required"> <br/>
                         Judul <input type="text" name="Judul" required="required"> <br/>
                         Penulis <input type="text" name="Penulis" required="required"> <br/>
                         Penertib <input type="text" name="Penertib" required="required"> <br/>

@@ -18,11 +18,7 @@
                         <table class="table align-items-center mb-0">
                             <thead>
                                 <tr>
-                                    
-                            </thead>
-
-                            <tbody>
-                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         IDBuku
                                     </th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
@@ -46,6 +42,11 @@
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Opsi
                                     </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                           
                                 </tr>
                                 @foreach($buku_zami as $u)
                                 <tr>

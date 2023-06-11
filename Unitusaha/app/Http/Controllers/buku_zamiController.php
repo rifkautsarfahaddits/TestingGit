@@ -20,7 +20,7 @@ class buku_zamiController extends Controller
     {
     
         // memanggil view tambah
-        return view('tambahbuku_zami');
+        return view('tambah_buku_zami');
     
     }
 
